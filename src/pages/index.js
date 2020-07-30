@@ -13,7 +13,7 @@ export default function Home() {
           <nav className="nav">
             <ul>
               <li>
-                <a href="base-index.html">TOP</a>
+                <a href="base-index.html">TOPページ</a>
               </li>
               <li>
                 <a href="base-about.html">ABOUT</a>
