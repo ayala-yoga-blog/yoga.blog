@@ -6,6 +6,12 @@
 
 module.exports = {
   /* Your site config here */
+  siteMetadata: {
+    title: `AYALA`,
+    description: `AYALAのYOGA情報発信&レッスン予約サイト`,
+    lang: "ja",
+    siteUrl: `https://keen-newton-816efa.netlify.app`,
+  },
   plugins: [
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
@@ -16,5 +22,6 @@ module.exports = {
         path: `${__dirname}/src/images/`,
       },
     },
+    `gatsby-plugin-react-helmet`,
   ],
 }
