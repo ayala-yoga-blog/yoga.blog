@@ -11,6 +11,8 @@ module.exports = {
     description: `AYALAのYOGA情報発信&レッスン予約サイト`,
     lang: "ja",
     siteUrl: `https://keen-newton-816efa.netlify.app`,
+    locale: `ja_JP`,
+    fbappid: `XXXXXXXXXXXXXXXXXXXXX`,
   },
   plugins: [
     `gatsby-transformer-sharp`,
@@ -23,5 +25,18 @@ module.exports = {
       },
     },
     `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `AYALA YOGA`,
+        short_name: `AYALA`,
+        start_url: `/`,
+        background_color: `#ffffff`,
+        theme_color: `#477294`,
+        display: `standalone`,
+        icon: `src/images/icon.png`,
+      },
+    },
+    `gatsby-plugin-offline`,
   ],
 }
