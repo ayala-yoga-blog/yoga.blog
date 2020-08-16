@@ -10,7 +10,6 @@ import SEO from "../components/seo"
 import { faUtensils, faCheckSquare } from "@fortawesome/free-solid-svg-icons"
 
 export default ({ data, location }) => {
-  console.log(location.pathname)
   return (
     <Layout>
       <SEO
