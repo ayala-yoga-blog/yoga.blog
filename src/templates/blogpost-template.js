@@ -4,6 +4,7 @@ import Img from "gatsby-image"
 import Layout from "../components/layout"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faClock, faFolderOpen } from "@fortawesome/free-regular-svg-icons"
 import {
   faChevronLeft,
   faChevronRight,
@@ -73,15 +74,17 @@ export default ({ data, pageContext, location }) => {
             <h1 className="bar">{data.contentfulBlogPost.title}</h1>
             <aside className="info">
               <time dateTime={data.contentfulBlogPost.publishData}>
-                <i className="far fa-clock" />
+                <FontAwesomeIcon icon={faClock} />
                 {data.contentfulBlogPost.publishDataJP}
               </time>
               <div className="cat">
-                <i className="far fa-folder-open" />
+                <FontAwesomeIcon icon={faFolderOpen} />
                 <ul>
                   {data.contentfulBlogPost.category.map(cat => (
                     <li className={cat.categorySlug} key={cat.id}>
-                      {cat.category}
+                      <Link to={`/cat/${cat.categorySlug}/`}>
+                        {cat.category}
+                      </Link>
                     </li>
                   ))}
                 </ul>
