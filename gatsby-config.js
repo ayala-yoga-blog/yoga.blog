@@ -13,6 +13,18 @@ module.exports = {
     siteUrl: `https://keen-newton-816efa.netlify.app`,
     locale: `ja_JP`,
     fbappid: `XXXXXXXXXXXXXXXXXXXXX`,
+    home: `Home`,
+    about: `about`,
+    blog: `Blog`,
+    schedule: `Schedule`,
+    instagram: `Instagram`,
+    lesson: `レッスンご予約`,
+    homeUrl: `/`,
+    aboutUrl: `/about`,
+    blogUrl: `/blog`,
+    scheduleUrl: `/Schedule`,
+    instagramUrl: `/Instagram`,
+    lessonUrl: `/lesson`,
   },
   plugins: [
     `gatsby-transformer-sharp`,
@@ -44,6 +56,30 @@ module.exports = {
         spaceId: process.env.CONTENTFUL_SPACE_ID,
         accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
         host: process.env.CONTENTFUL_HOST,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-google-fonts-v2`,
+      options: {
+        fonts: [
+          {
+            family: "Noto Sans JP",
+            variable: true,
+            weights: [100, 300, 400, 500, 700, 900],
+          },
+        ],
+      },
+    },
+    {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Noto Sans JP`,
+            subsets: [`japanese`],
+            variants: [`100`, `300`, `400`, `500`, `700`, `900`],
+          },
+        ],
       },
     },
   ],
