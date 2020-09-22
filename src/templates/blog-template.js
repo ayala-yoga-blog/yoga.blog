@@ -21,7 +21,7 @@ export default ({ data, pageContext, location }) => {
       />
       <section className="content bloglist">
         <div className="container">
-          <h1 className="bar">RECENT POSTS</h1>
+          <h1 className="bar">Blog</h1>
           <div className="posts">
             {data.allContentfulBlogPost.edges.map(({ node }) => (
               <article className="post" key={node.id}>

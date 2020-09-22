@@ -200,7 +200,34 @@ svg {
     margin-top: 4px;
   }
 }
-
+/* ABOUT */
+.about-icon {
+  width: 173px;
+  margin: 0 auto;
+}
+.about-text {
+  margin-left: 30px;
+  margin-right: 30px;
+}
+.about-text p {
+  margin-top: 4px;
+}
+@media (min-width: 600px) {
+  .content-box-about {
+    display: flex;
+  }
+  .about-icon {
+    width: 173px;
+  }
+  .about-text {
+    margin-left: 30px;
+    margin-right: 0px;
+    width: calc(100% - 241px);
+  }
+  .about-text p {
+    margin-top: 4px;
+  }
+}
 /* フード */
 .food {
   padding: 30px 0;
@@ -558,8 +585,7 @@ svg {
   width: 7em;
   padding: 0.5em 1em;
   border-radius: 1em;
-  background-color: #477294;
-  color: #fff;
+  background-color: #f5ccd5;
   font-size: 14px;
   display: flex;
   align-items: center;
@@ -706,4 +732,15 @@ nav
   opacity: 0.9;
   z-index: 2;
   cursor: pointer;
+}
+
+/*============
+#margin
+=============*/
+
+.mt-10 {
+  margin-top: 40px;
+}
+.mt-9 {
+  margin-top: 36px;
 }
