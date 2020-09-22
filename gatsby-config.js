@@ -14,7 +14,7 @@ module.exports = {
     locale: `ja_JP`,
     fbappid: `XXXXXXXXXXXXXXXXXXXXX`,
     home: `Home`,
-    about: `about`,
+    about: `About`,
     blog: `Blog`,
     schedule: `Schedule`,
     instagram: `Instagram`,

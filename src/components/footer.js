@@ -24,7 +24,10 @@ export default () => {
 
   return (
     <footer className="footer">
-      <div className="container">
+      <div className="color-bar">
+        <p>Copyright © 2020 Aya's All Rights Reserved.</p>
+      </div>
+      {/* <div className="container">
         <div className="site">
           <Link to={`/`}>
             <svg
@@ -69,7 +72,7 @@ export default () => {
           alt=""
           style={{ height: "100%" }}
         ></Img>
-      </div>
+      </div> */}
     </footer>
   )
 }

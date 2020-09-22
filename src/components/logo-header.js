@@ -30,7 +30,7 @@ export default ({ open, setOpen, home }) => {
       <div>
         <div className="company-logo">Aya's</div>
         <div className="company-logo_subtitle">vinyasa yoga / yin yoga</div>
-        <MediaQuery query="(max-width: 767px)">
+        <MediaQuery query="(max-width: 1024px)">
           <div id="nav-area">
             <div id="nav-content" aria-expanded={open}>
               <div className="inner">

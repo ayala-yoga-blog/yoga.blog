@@ -1,8 +1,9 @@
 import React, { useState } from "react"
 
-import Header from "../components/header"
+// import Header from "../components/header"
 import Logo_header from "../components/logo-header"
 import Footer from "../components/footer"
+import Meny from "../components/meny"
 import MediaQuery from "react-responsive"
 
 import "./layout.css"
@@ -19,11 +20,16 @@ export default ({ children }) => {
   // const schedule = useState("Schedule")
 
   return (
-    <div>
+    <div className="wrapper">
       <Logo_header open={open} setOpen={setOpen} home={home} />
-      <MediaQuery query="(max-width: 767px)">tt</MediaQuery>
-      <MediaQuery query="(min-width: 767px)">tt</MediaQuery>
-      <div>{children}</div>
+      <div className="content-box">
+        <MediaQuery query="(min-width: 1024px)">
+          <div className="meny-content">
+            <Meny />
+          </div>
+        </MediaQuery>
+        <div className="main-content">{children}</div>
+      </div>
       <Footer />
     </div>
   )

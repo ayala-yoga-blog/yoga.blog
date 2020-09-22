@@ -4,12 +4,18 @@
 body {
   font-family: "Noto Sans JP";
   color: #222;
+  background-color: #f8f8f8;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .container {
-  width: 84%;
+  width: 100%;
   max-width: 1147px;
-  margin: 0 auto;
 }
 
 body,
@@ -50,14 +56,6 @@ svg {
   vertical-align: bottom;
 }
 
-.nav,
-.catch h1,
-.food h2,
-.detail p:first-of-type,
-.info .subtitle {
-  font-family: "Avenir Next", "Segoe UI", Helvetica, sans-serif;
-}
-
 .sr-only {
   border: 0;
   clip: rect(0 0 0 0);
@@ -80,12 +78,15 @@ svg {
 
 .color-bar {
   width: 100vw;
-  height: 38px;
-  background-color: pink;
+  height: 30px;
+  background-color: #f5ccd5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .company-logo {
-  font-size: clamp(38px, 11vw, 48px);
+  font-size: clamp(38px, 11vw, 44px);
   font-family: Helvetica, sans-serif;
   margin-left: 32px;
   margin-top: 16px;
@@ -99,16 +100,39 @@ svg {
   margin-top: 4px;
 }
 
-.nav ul {
+.content-box {
   display: flex;
   justify-content: center;
-  list-style: none;
-  margin-top: 18px;
-  color: #477294;
+  margin: 0 32px;
 }
 
-.nav li:not(:last-child) {
-  margin-right: 55px;
+.meny-fiexd {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  position: fixed;
+}
+.meny-content {
+  width: 180px;
+}
+.main-content {
+  width: calc(100% - 180px);
+}
+
+@media (max-width: 1024px) {
+  .main-content {
+    width: 100%;
+  }
+}
+
+.nav ul {
+  font-family: Helvetica, "Noto Sans JP", sans-serif;
+  list-style: none;
+}
+
+.nav li {
+  margin-bottom: 16px;
 }
 
 @media (min-width: 768px) {
@@ -126,74 +150,54 @@ svg {
 /* ヒーロー */
 .hero {
   position: relative;
+  top: 20px;
+  margin: 0 10px;
 }
 
-.hero figure {
-  max-height: 100%;
-  height: 450px;
+.hero-text {
+  margin: 48px auto;
 }
 
-.hero figure img {
-  width: 100%;
-  height: 450px;
-  object-fit: cover;
-}
-
-.hero .catch {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  margin: auto auto 10%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  color: #fff;
-  text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-}
-
-.hero .catch h1 {
-  font-size: 20px;
+.hero-text h2 {
   margin-bottom: 10px;
-}
-.hero .catch p {
-  font-size: 10px;
-}
-
-.hero .wave {
-  position: absolute;
-  right: 0;
-  bottom: -10px;
-  left: 0;
-  margin: auto;
-  width: 100%;
+  line-height: 1.5;
+  font-size: clamp(18px, 2vmax, 22px);
+  text-align: center;
 }
 
-@media (min-width: 768px) {
-  .hero figure {
-    height: 750px;
-  }
-  .hero figure img {
-    height: 750px;
-  }
-  .hero .catch h1 {
-    font-size: 40px;
-    margin-bottom: 30px;
-  }
-  .hero .catch p {
-    font-size: 16px;
-  }
+.hero-text p {
+  line-height: 1.8;
+  font-size: clamp(12px, 2vmin, 18px);
+  text-align: center;
 }
 
-@media (min-width: 900px) {
-  .hero .catch h1 {
-    font-size: 56px;
-    margin-bottom: 30px;
+@media (min-width: 600px) {
+  .hero {
+    position: relative;
+    width: 62vh;
+    margin: 0 10px;
+    top: -30px;
   }
-  .hero .catch p {
-    font-size: 24px;
+  .hero-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 142px);
+  }
+
+  .hero-text {
+    width: 50%;
+    margin: 0 0 50px 20px;
+    max-width: 484px;
+  }
+
+  .hero-text h2 {
+    text-align: left;
+  }
+
+  .hero-text p {
+    text-align: left;
+    margin-top: 4px;
   }
 }
 
@@ -259,50 +263,19 @@ svg {
 .bar {
   padding-bottom: 16px;
   position: relative;
+  font-family: Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 28px !important;
 }
-.bar::before,
+
 .bar::after {
+  margin: 8px 0 0 0;
   display: block;
   content: "";
-  background-color: #0facde;
-  width: 80%;
+  background-color: #000000;
+  width: 100%;
   height: 1px;
   position: absolute;
-}
-.bar::before {
-  left: 0;
-  bottom: 6px;
-}
-.bar::after {
-  right: 0;
-  bottom: 0;
-}
-
-.content .bar::before {
-  width: 200px;
-}
-
-@media (min-width: 768px) {
-  .bar {
-    max-width: 375px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .bar::before,
-  .bar::after {
-    width: 73%;
-  }
-
-  .content .bar {
-    max-width: none;
-  }
-  .content .bar::before {
-    width: 312px;
-  }
-  .content .bar::after {
-    width: 81%;
-  }
 }
 
 /* フォト */
@@ -325,70 +298,62 @@ svg {
   }
 }
 
+/* ボタン */
+.button {
+  display: inline-block;
+  padding: 6px 10px;
+  margin-top: 32px;
+  width: 94%;
+  border: 2px solid #333;
+  border-radius: 20px;
+  text-align: center;
+  text-decoration: none;
+  font-size: clamp(12px, 2vmin, 18px);
+}
+
+@media (max-width: 830px) {
+  .button {
+    width: 88%;
+  }
+}
+
+.button-ac {
+  position: relative;
+  width: 92%;
+  margin: 0 auto;
+}
+
+.button-ac::after {
+  position: absolute;
+  top: 50%;
+  right: 0px;
+  content: "";
+  margin-top: -5px;
+  border: 7px solid transparent;
+  border-top-width: 5px;
+  border-bottom-width: 5px;
+  border-left-color: black;
+  opacity: 0;
+  animation: arrow 3s cubic-bezier(0.19, 1, 0.22, 1) 2s infinite;
+}
+@keyframes arrow {
+  55% {
+    right: 0px;
+    opacity: 1;
+  }
+  100% {
+    right: -10px;
+    opacity: 0;
+  }
+}
+
 /* フッター */
 .footer {
-  padding-top: 60px;
-  padding-bottom: 60px;
-  color: #fff;
-  background-image: none;
-  background-size: cover;
-  background-color: #477294;
+  margin-top: auto;
 }
-
-.footer .container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.footer .site {
-  text-align: center;
-}
-.footer .site p {
-  margin-top: 20px;
-  margin-bottom: 50px;
-  font-size: 14px;
-}
-
-@media (min-width: 768px) {
-  .footer {
-    padding-top: 120px;
-    padding-bottom: 120px;
-  }
-
-  .footer .container {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .footer .site {
-    text-align: left;
-  }
-  .footer .site p {
-    margin-top: 10px;
-    margin-bottom: 0;
-    font-size: 18px;
-  }
-}
-
-/* フッター背景画像 */
-.footer {
-  position: relative;
-}
-
-.footer .container {
-  position: relative;
-  z-index: 10;
-}
-
-.footer .back {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
+.footer p {
+  font-size: 12px;
+  line-height: 1;
 }
 
 /* SNSメニュー */
