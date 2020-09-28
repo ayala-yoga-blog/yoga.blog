@@ -15,9 +15,6 @@ config.autoAddCss = false
 export default ({ children }) => {
   const [open, setOpen] = useState(false)
   const home = useState("Home")
-  // const about = useState("About")
-  // const blog = useState("Blog")
-  // const schedule = useState("Schedule")
 
   return (
     <div className="wrapper">

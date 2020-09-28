@@ -342,6 +342,12 @@ svg {
   font-size: clamp(12px, 2vmin, 18px);
 }
 
+.button_sc {
+  width: 50%;
+  margin: 64px auto 32px !important;
+  display: block !important;
+}
+
 @media (max-width: 830px) {
   .button {
     width: 88%;
@@ -741,7 +747,12 @@ nav
 /*============
 #margin
 =============*/
-
+.mt-12 {
+  margin-top: 48px;
+}
+.mt-11 {
+  margin-top: 44px;
+}
 .mt-10 {
   margin-top: 40px;
 }

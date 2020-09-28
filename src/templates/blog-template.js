@@ -72,7 +72,7 @@ export default ({ data, pageContext, location }) => {
 export const query = graphql`
   query($skip: Int!, $limit: Int!) {
     allContentfulBlogPost(
-      sort: { order: DESC, fields: publishData }
+      sort: { order: DESC, fields: updatedAt }
       skip: $skip
       limit: $limit
     ) {

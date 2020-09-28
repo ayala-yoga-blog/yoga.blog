@@ -22,7 +22,7 @@ module.exports = {
     homeUrl: `/`,
     aboutUrl: `/about`,
     blogUrl: `/blog`,
-    scheduleUrl: `/Schedule`,
+    scheduleUrl: `/schedule`,
     instagramUrl: `/Instagram`,
     lessonUrl: `/lesson`,
   },

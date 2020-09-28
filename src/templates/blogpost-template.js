@@ -61,7 +61,7 @@ export default ({ data, pageContext, location }) => {
         pageimah={data.contentfulBlogPost.eyecatch.file.details.image.height}
       />
       <div>
-        <div className="eyecatch">
+        <div className="eyecatch mt-12">
           <figure>
             <Img
               fluid={data.contentfulBlogPost.eyecatch.fluid}
