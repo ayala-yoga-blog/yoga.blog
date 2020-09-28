@@ -24,7 +24,7 @@ module.exports = {
     blogUrl: `/blog`,
     scheduleUrl: `/schedule`,
     instagramUrl: `/Instagram`,
-    lessonUrl: `/lesson`,
+    lessonUrl: `/reservation`,
   },
   plugins: [
     `gatsby-transformer-sharp`,
