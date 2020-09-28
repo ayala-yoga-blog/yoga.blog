@@ -596,7 +596,7 @@ svg {
   width: 7em;
   padding: 0.5em 1em;
   border-radius: 1em;
-  background-color: #f5ccd5;
+  background-color: #ffe0e7;
   font-size: 14px;
   display: flex;
   align-items: center;
@@ -759,4 +759,24 @@ nav
 }
 .mt-9 {
   margin-top: 36px;
+}
+.mt-0 {
+  margin-top: 0px !important;
+}
+.mb-0 {
+  margin-bottom: 0px !important;
+}
+
+/*============
+#display
+=============*/
+
+.d-block {
+  display: block;
+}
+
+.checkbox-bk {
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 8px;
 }
