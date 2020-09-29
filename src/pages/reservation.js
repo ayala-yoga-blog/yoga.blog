@@ -1,11 +1,26 @@
 import React from "react"
-// import { graphql } from "gatsby"
+import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 
 import SEO from "../components/seo"
 
 export default ({ data, location }) => {
+  let schedule_list = []
+  const list_item = data.contentfulBlogPost.content.json.content.filter(
+    item => item.nodeType === "unordered-list"
+  )
+
+  const accses_schedule = function () {
+    for (let i = 0; i < list_item.length; i++) {
+      list_item[i].content.filter(item =>
+        item.content.filter(e =>
+          e.content.filter(d => schedule_list.unshift(d.value))
+        )
+      )
+    }
+  }
+  accses_schedule()
   return (
     <Layout>
       <SEO
@@ -31,28 +46,21 @@ export default ({ data, location }) => {
               <div>
                 <p className="mb-3">開催日程</p>
                 <div className="checkbox-bk">
-                  <div>
-                    <label htmlFor="coding">
-                      <input
-                        type="checkbox"
-                        id="coding"
-                        name="interest"
-                        value="coding"
-                      />
-                      コーディング
-                    </label>
-                  </div>
-                  <div>
-                    <label htmlFor="music">
-                      <input
-                        type="checkbox"
-                        id="music"
-                        name="interest"
-                        value="music"
-                      />
-                      音楽
-                    </label>
-                  </div>
+                  {schedule_list.reverse().map((d, idx) => {
+                    return (
+                      <div>
+                        <label htmlFor={idx}>
+                          <input
+                            type="checkbox"
+                            id={idx}
+                            name="interest"
+                            value={idx}
+                          />
+                          {d}
+                        </label>
+                      </div>
+                    )
+                  })}
                 </div>
               </div>
               <div className="mt-7 mb-3">お名前</div>
@@ -115,13 +123,13 @@ export default ({ data, location }) => {
   )
 }
 
-// export const query = graphql`
-//   query {
-//     contentfulBlogPost(title: { eq: "開催スケジュール" }) {
-//       title
-//       content {
-//         json
-//       }
-//     }
-//   }
-// `
+export const query = graphql`
+  query {
+    contentfulBlogPost(title: { eq: "開催スケジュール" }) {
+      title
+      content {
+        json
+      }
+    }
+  }
+`

@@ -41,8 +41,6 @@ const options = {
 }
 
 export default ({ data, location }) => {
-  const test = data.contentfulBlogPost.content.json
-  console.log(test)
   return (
     <Layout>
       <SEO
