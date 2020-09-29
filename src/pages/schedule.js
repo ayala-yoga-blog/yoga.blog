@@ -41,6 +41,8 @@ const options = {
 }
 
 export default ({ data, location }) => {
+  const test = data.contentfulBlogPost.content.json
+  console.log(test)
   return (
     <Layout>
       <SEO
@@ -52,7 +54,7 @@ export default ({ data, location }) => {
         <article className="content">
           <div className="container">
             <h1 className="bar">SCHEDULE</h1>
-            <div className="postbody">
+            <div className="postbody schedule-content">
               {documentToReactComponents(
                 data.contentfulBlogPost.content.json,
                 options

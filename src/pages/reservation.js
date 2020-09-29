@@ -29,7 +29,7 @@ export default ({ data, location }) => {
             <form name="contact" method="post" data-netlify="true">
               <input type="hidden" name="form-name" value="contact" />
               <div>
-                <p>開催日程</p>
+                <p className="mb-3">開催日程</p>
                 <div className="checkbox-bk">
                   <div>
                     <label htmlFor="coding">
@@ -55,7 +55,7 @@ export default ({ data, location }) => {
                   </div>
                 </div>
               </div>
-              <div>お名前</div>
+              <div className="mt-7 mb-3">お名前</div>
               <label htmlFor="name">
                 <input
                   type="name"
@@ -65,7 +65,7 @@ export default ({ data, location }) => {
                   required
                 />
               </label>
-              <div>フリガナ</div>
+              <div className="mt-7 mb-3">フリガナ</div>
               <label htmlFor="furigana">
                 <input
                   type="furigana"
@@ -75,7 +75,7 @@ export default ({ data, location }) => {
                   required
                 />
               </label>
-              <div>電話番号</div>
+              <div className="mt-7 mb-3">電話番号</div>
               <label htmlFor="tel">
                 <input
                   type="tel"
@@ -85,7 +85,7 @@ export default ({ data, location }) => {
                   required
                 />
               </label>
-              <div>メールアドレス</div>
+              <div className="mt-7 mb-3">メールアドレス</div>
               <label htmlFor="mail">
                 <input
                   type="mail"
@@ -95,7 +95,7 @@ export default ({ data, location }) => {
                   required
                 />
               </label>
-              <div>メッセージ</div>
+              <div className="mt-7 mb-3">メッセージ</div>
               <label htmlFor="text">
                 <textarea
                   name="message"
