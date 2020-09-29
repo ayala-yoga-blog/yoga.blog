@@ -779,4 +779,17 @@ nav
   background-color: #fff;
   padding: 10px;
   border-radius: 8px;
+  width: 100%;
+}
+
+.text-form {
+  border: 0;
+  padding: 10px;
+  font-size: 1.3em;
+  font-family: Arial, sans-serif;
+  color: #aaa;
+  border: none;
+  margin: 0 0 20px;
+  width: 100%;
+  border-radius: 8px;
 }
