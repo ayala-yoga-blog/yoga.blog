@@ -41,7 +41,12 @@ export default ({ data, location }) => {
               <p>ayazonyoga@gmail.com</p>
             </div>
 
-            <form name="contact" method="post" data-netlify="true">
+            <form
+              name="contact"
+              method="post"
+              data-netlify="true"
+              action="/success"
+            >
               <input type="hidden" name="form-name" value="contact" />
               <div>
                 <p className="mb-3">開催日程</p>

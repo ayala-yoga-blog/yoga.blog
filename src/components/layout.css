@@ -88,7 +88,7 @@ svg {
 
 .company-logo {
   font-size: clamp(38px, 11vw, 44px);
-  font-family: "Allura",Helvetica, sans-serif;
+  font-family: "Allura", Helvetica, sans-serif;
   margin-left: 32px;
   margin-top: 16px;
   line-height: 1;
@@ -862,11 +862,11 @@ nav
 /*============
 #center
 =============*/
-.mlr-auto{
+.mlr-auto {
   margin-left: auto;
   margin-right: auto;
 }
-.text-center{
+.text-center {
   text-align: center;
 }
 
@@ -894,4 +894,20 @@ nav
   border: none;
   width: calc(100% - 20px);
   border-radius: 8px;
+}
+
+/*============
+#success
+=============*/
+.success-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 320px);
+}
+
+.success-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 12px;
 }
