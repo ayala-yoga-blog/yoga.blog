@@ -41,6 +41,7 @@ export default props => {
       <meta name="description" content={description} />
 
       <link rel="canonical" href={url} />
+      <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet" />
 
       <meta property="og:site_name" content={data.site.siteMetadata.title} />
       <meta property="og:title" content={title} />

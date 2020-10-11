@@ -54,7 +54,7 @@ export default ({ data, location }) => {
               <div className="about-icon">
                 <figure>
                   <Img
-                    fluid={data.aya_icon.childImageSharp.fluid}
+                    fluid={data.profile.childImageSharp.fluid}
                     alt=""
                     style={{ height: "100%" }}
                   />
@@ -97,6 +97,13 @@ export const query = graphql`
           ...GatsbyImageSharpFluid_withWebp
         }
       }
-    }
+    },
+    profile: file(relativePath: { eq: "profile.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 482) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    },
   }
 `

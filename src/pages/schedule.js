@@ -2,6 +2,7 @@ import React from "react"
 import { graphql, Link } from "gatsby"
 import Img from "gatsby-image"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import MediaQuery from "react-responsive"
 
 import Layout from "../components/layout"
 
@@ -58,6 +59,16 @@ export default ({ data, location }) => {
                 options
               )}
             </div>
+            <MediaQuery query="(min-width: 600px)">
+            <div className="mt-4">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3281.366606506817!2d135.50925111502303!3d34.670695792332666!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e747516d5fcb%3A0x64152419b068c987!2z44CSNTQyLTAwNjYg5aSn6Ziq5bqc5aSn6Ziq5biC5Lit5aSu5Yy655Om5bGL55S677yS5LiB55uu77yR77yW4oiS77yUIOiNkuW3neODk-ODqyAy6ZqO!5e0!3m2!1sja!2sjp!4v1602417636059!5m2!1sja!2sjp" width={580} height={250} frameBorder={0} style={{ border: 0 }} allowFullScreen aria-hidden="false" title="map"/>
+            </div>
+            </MediaQuery>
+            <MediaQuery query="(max-width: 600px)">
+              <div className="mt-4 text-center">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3281.366606506817!2d135.50925111502303!3d34.670695792332666!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e747516d5fcb%3A0x64152419b068c987!2z44CSNTQyLTAwNjYg5aSn6Ziq5bqc5aSn6Ziq5biC5Lit5aSu5Yy655Om5bGL55S677yS5LiB55uu77yR77yW4oiS77yUIOiNkuW3neODk-ODqyAy6ZqO!5e0!3m2!1sja!2sjp!4v1602417636059!5m2!1sja!2sjp" width={250} height={250} frameBorder={0} style={{ border: 0 }} allowFullScreen aria-hidden="false" title="map"/>
+              </div>
+            </MediaQuery>
             <div className="button button_sc">
               <Link to={`/blog/`}>
                 <div className="button-ac">レッスンのご予約はこちら</div>

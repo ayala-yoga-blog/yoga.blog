@@ -88,13 +88,13 @@ svg {
 
 .company-logo {
   font-size: clamp(38px, 11vw, 44px);
-  font-family: Helvetica, sans-serif;
+  font-family: "Allura",Helvetica, sans-serif;
   margin-left: 32px;
   margin-top: 16px;
   line-height: 1;
 }
 .company-logo_subtitle {
-  font-size: clamp(14px, 4vw, 18px);
+  font-size: clamp(12px, 4vw, 16px);
   margin-left: 32px;
   line-height: 1;
   font-weight: 500;
@@ -857,6 +857,17 @@ nav
 
 .ml-3 {
   margin-left: 12px;
+}
+
+/*============
+#center
+=============*/
+.mlr-auto{
+  margin-left: auto;
+  margin-right: auto;
+}
+.text-center{
+  text-align: center;
 }
 
 /*============
