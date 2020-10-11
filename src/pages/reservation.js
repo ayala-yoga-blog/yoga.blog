@@ -45,8 +45,8 @@ export default ({ data, location }) => {
               name="contact"
               method="post"
               data-netlify="true"
-              data-netlify-recaptcha="true"
-              action="https://keen-newton-816efa.netlify.app/thankyou/"
+              data-netlify-honeypot="bot-field"
+              action="/thankyou"
             >
               <input type="hidden" name="form-name" value="contact" />
               <div>
@@ -55,10 +55,8 @@ export default ({ data, location }) => {
                   {schedule_list.reverse().map((d, idx) => {
                     return (
                       <div className="mt-2 mb-2">
-                        <label htmlFor={d}>
-                          <input type="checkbox" id={idx} name={d} value={d} />
-                          {d}
-                        </label>
+                        <input type="checkbox" id={d} name={d} value={d} />
+                        <label htmlFor={d}>{d}</label>
                       </div>
                     )
                   })}
@@ -112,7 +110,6 @@ export default ({ data, location }) => {
                   className="text-form"
                 ></textarea>
               </label>
-              <div data-netlify-recaptcha="true"></div>
               <p>
                 <button type="submit">Send</button>
               </p>
