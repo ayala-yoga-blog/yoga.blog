@@ -4,7 +4,6 @@ import React, { useState } from "react"
 import Logo_header from "../components/logo-header"
 import Footer from "../components/footer"
 import Meny from "../components/meny"
-import MediaQuery from "react-responsive"
 
 import "./layout.css"
 
@@ -20,11 +19,9 @@ export default ({ children }) => {
     <div className="wrapper">
       <Logo_header open={open} setOpen={setOpen} home={home} />
       <div className="content-box">
-        <MediaQuery query="(min-width: 1024px)">
-          <div className="meny-box">
-            <Meny />
-          </div>
-        </MediaQuery>
+        <div className="meny-box d-none">
+          <Meny />
+        </div>
         <div className="main-content">{children}</div>
       </div>
       <Footer />

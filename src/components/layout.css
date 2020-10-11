@@ -880,6 +880,12 @@ nav
   display: block;
 }
 
+@media (max-width: 1024px) {
+  .d-none {
+    display: none;
+  }
+}
+
 .checkbox-bk {
   background-color: #fff;
   padding: 10px;

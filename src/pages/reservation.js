@@ -42,42 +42,44 @@ export default ({ data, location }) => {
             </div>
 
             <form
-              name="test"
+              name="test2"
               method="post"
               data-netlify="true"
               data-netlify-honeypot="bot-field"
               action="/thankyou"
             >
-              <input type="hidden" name="form-name" value="test" />
+              <input type="hidden" name="form-name" value="test2" />
               <div>
                 <p className="mb-3">開催日程</p>
                 <div className="checkbox-bk mb-7">
                   {schedule_list.reverse().map((d, idx) => {
                     return (
                       <div className="mt-2 mb-2" key={idx}>
+                        <input
+                          type="checkbox"
+                          id={idx}
+                          name={idx}
+                          value={d}
+                          key={idx}
+                        />
                         <label htmlFor={idx} key={idx}>
-                          <input
-                            type="checkbox"
-                            id={idx}
-                            name={idx}
-                            value={d}
-                            key={idx}
-                          />
+                          {d}
                         </label>
                       </div>
                     )
                   })}
                 </div>
               </div>
-              <label htmlFor="name">お名前</label>
-              <input
-                type="text"
-                name="name"
-                id="name"
-                className="text-form mt-3"
-                required
-              />
-
+              <label htmlFor="name">
+                お名前
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  className="text-form mt-3"
+                  required
+                />
+              </label>
               <div className="mb-7"></div>
               <label htmlFor="furigana mb-7">
                 フリガナ
