@@ -45,7 +45,8 @@ export default ({ data, location }) => {
               name="contact"
               method="post"
               data-netlify="true"
-              action="/thankyou"
+              data-netlify-recaptcha="true"
+              action="https://keen-newton-816efa.netlify.app/thankyou/"
             >
               <input type="hidden" name="form-name" value="contact" />
               <div>
@@ -117,6 +118,7 @@ export default ({ data, location }) => {
                   className="text-form"
                 ></textarea>
               </label>
+              <div data-netlify-recaptcha="true"></div>
               <p>
                 <button type="submit">Send</button>
               </p>
