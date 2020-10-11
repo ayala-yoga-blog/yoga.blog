@@ -55,14 +55,8 @@ export default ({ data, location }) => {
                   {schedule_list.reverse().map((d, idx) => {
                     return (
                       <div className="mt-2 mb-2">
-                        <label htmlFor={idx}>
-                          <input
-                            type="checkbox"
-                            id={idx}
-                            name="interest"
-                            value={d}
-                            required
-                          />
+                        <label htmlFor={d}>
+                          <input type="checkbox" id={idx} name={d} value={d} />
                           {d}
                         </label>
                       </div>
@@ -115,7 +109,6 @@ export default ({ data, location }) => {
                 <textarea
                   name="message"
                   id="text"
-                  required
                   className="text-form"
                 ></textarea>
               </label>
