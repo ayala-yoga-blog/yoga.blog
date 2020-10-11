@@ -42,13 +42,13 @@ export default ({ data, location }) => {
             </div>
 
             <form
-              name="contact"
+              name="test"
               method="post"
               data-netlify="true"
               data-netlify-honeypot="bot-field"
               action="/thankyou"
             >
-              <input type="hidden" name="form-name" value="contact" />
+              <input type="hidden" name="form-name" value="test" />
               <div>
                 <p className="mb-3">開催日程</p>
                 <div className="checkbox-bk mb-7">
@@ -63,28 +63,26 @@ export default ({ data, location }) => {
                             value={d}
                             key={idx}
                           />
-                          {d}
                         </label>
                       </div>
                     )
                   })}
                 </div>
               </div>
-              <label htmlFor="name">
-                お名前
-                <input
-                  type="name"
-                  name="name"
-                  id="name"
-                  className="text-form mt-3"
-                  required
-                />
-              </label>
+              <label htmlFor="name">お名前</label>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                className="text-form mt-3"
+                required
+              />
+
               <div className="mb-7"></div>
               <label htmlFor="furigana mb-7">
                 フリガナ
                 <input
-                  type="furigana"
+                  type="text"
                   name="furigana"
                   id="furigana"
                   className="text-form mt-3"
@@ -106,8 +104,8 @@ export default ({ data, location }) => {
               <label htmlFor="mail">
                 メールアドレス
                 <input
-                  type="mail"
-                  name="mail"
+                  type="email"
+                  name="email"
                   id="mail"
                   className="text-form mt-3"
                   required
