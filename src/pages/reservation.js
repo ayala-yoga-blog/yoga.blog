@@ -1,11 +1,16 @@
 import React from "react"
 import { graphql } from "gatsby"
+import { useForm } from "react-hook-form"
 
 import Layout from "../components/layout"
 
 import SEO from "../components/seo"
 
 export default ({ data, location }) => {
+  const { register, handleSubmit, errors } = useForm()
+  const onSubmit = data => console.log(data)
+  console.log(errors)
+
   let schedule_list = []
   const list_item = data.contentfulBlogPost.content.json.content.filter(
     item => item.nodeType === "unordered-list"
@@ -47,6 +52,7 @@ export default ({ data, location }) => {
               data-netlify="true"
               data-netlify-honeypot="bot-field"
               action="/thankyou"
+              onSubmit={handleSubmit(onSubmit)}
             >
               <input type="hidden" name="form-name" value="test2" />
               <div>
@@ -55,16 +61,8 @@ export default ({ data, location }) => {
                   {schedule_list.reverse().map((d, idx) => {
                     return (
                       <div className="mt-2 mb-2" key={idx}>
-                        <input
-                          type="checkbox"
-                          id={idx}
-                          name={idx}
-                          value={d}
-                          key={idx}
-                        />
-                        <label htmlFor={idx} key={idx}>
-                          {d}
-                        </label>
+                        <input type="checkbox" id={idx} name={idx} value={d} />
+                        <label htmlFor={idx}>{d}</label>
                       </div>
                     )
                   })}
@@ -77,9 +75,10 @@ export default ({ data, location }) => {
                   name="name"
                   id="name"
                   className="text-form mt-3"
-                  required
+                  ref={register({ required: true, maxLength: 20 })}
                 />
               </label>
+              <div>{errors.name && errors.name.message}</div>
               <div className="mb-7"></div>
               <label htmlFor="furigana mb-7">
                 フリガナ
@@ -88,9 +87,16 @@ export default ({ data, location }) => {
                   name="furigana"
                   id="furigana"
                   className="text-form mt-3"
-                  required
+                  ref={register({
+                    required: "必ずご入力してください",
+                    pattern: {
+                      value: /^[ァ-ンヴー]*$/,
+                      message: "カタカナでご入力してください",
+                    },
+                  })}
                 />
               </label>
+              <div>{errors.furigana && errors.furigana.message}</div>
               <div className="mb-7"></div>
               <label htmlFor="tel">
                 電話番号
@@ -99,10 +105,18 @@ export default ({ data, location }) => {
                   name="tel"
                   id="tel"
                   className="text-form mt-3"
-                  required
+                  ref={register({
+                    required: "必ずご入力してください",
+                    pattern: {
+                      value: /^[0-9]+$/g,
+                      message: "カタカナでご入力してください",
+                    },
+                  })}
                 />
               </label>
+              <div>{errors.tel && errors.tel.message}</div>
               <div className="mb-7"></div>
+
               <label htmlFor="mail">
                 メールアドレス
                 <input
@@ -110,9 +124,16 @@ export default ({ data, location }) => {
                   name="email"
                   id="mail"
                   className="text-form mt-3"
-                  required
+                  ref={register({
+                    required: "必ずご入力してください",
+                    pattern: {
+                      value: /^[A-Za-z0-9]{1}[A-Za-z0-9_.-]*@{1}[A-Za-z0-9_.-]{1,}\.[A-Za-z0-9]{1,}$/,
+                      message: "カタカナでご入力してください",
+                    },
+                  })}
                 />
               </label>
+              <div>{errors.email && errors.email.message}</div>
               <div className="mb-7"></div>
               <label htmlFor="text">
                 メッセージ
