@@ -21,7 +21,7 @@ export default ({ children }) => {
       <Logo_header open={open} setOpen={setOpen} home={home} />
       <div className="content-box">
         <MediaQuery query="(min-width: 1024px)">
-          <div className="meny-content">
+          <div className="meny-box">
             <Meny />
           </div>
         </MediaQuery>

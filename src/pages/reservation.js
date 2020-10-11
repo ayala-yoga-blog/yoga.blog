@@ -51,7 +51,7 @@ export default ({ data, location }) => {
               <input type="hidden" name="form-name" value="contact" />
               <div>
                 <p className="mb-3">開催日程</p>
-                <div className="checkbox-bk">
+                <div className="checkbox-bk mb-7">
                   {schedule_list.reverse().map((d, idx) => {
                     return (
                       <div className="mt-2 mb-2" key={idx}>
@@ -70,57 +70,61 @@ export default ({ data, location }) => {
                   })}
                 </div>
               </div>
-              <div className="mt-7 mb-3">お名前</div>
               <label htmlFor="name">
+                お名前
                 <input
                   type="name"
                   name="name"
                   id="name"
-                  className="text-form"
+                  className="text-form mt-3"
                   required
                 />
               </label>
-              <div className="mt-7 mb-3">フリガナ</div>
-              <label htmlFor="furigana">
+              <div className="mb-7"></div>
+              <label htmlFor="furigana mb-7">
+                フリガナ
                 <input
                   type="furigana"
                   name="furigana"
                   id="furigana"
-                  className="text-form"
+                  className="text-form mt-3"
                   required
                 />
               </label>
-              <div className="mt-7 mb-3">電話番号</div>
+              <div className="mb-7"></div>
               <label htmlFor="tel">
+                電話番号
                 <input
                   type="tel"
                   name="tel"
                   id="tel"
-                  className="text-form"
+                  className="text-form mt-3"
                   required
                 />
               </label>
-              <div className="mt-7 mb-3">メールアドレス</div>
+              <div className="mb-7"></div>
               <label htmlFor="mail">
+                メールアドレス
                 <input
                   type="mail"
                   name="mail"
                   id="mail"
-                  className="text-form"
+                  className="text-form mt-3"
                   required
                 />
               </label>
-              <div className="mt-7 mb-3">メッセージ</div>
+              <div className="mb-7"></div>
               <label htmlFor="text">
+                メッセージ
                 <textarea
                   name="message"
                   id="text"
-                  className="text-form"
+                  className="text-form mt-3"
                 ></textarea>
               </label>
-              <p>
-                <button type="submit">Send</button>
-              </p>
+              <button type="submit" className="button button_sc">
+                <div>ご予約送信</div>
+              </button>
             </form>
           </div>
         </article>
