@@ -45,7 +45,7 @@ export default ({ data, location }) => {
               name="contact"
               method="post"
               data-netlify="true"
-              action="/success"
+              action="/success/"
             >
               <input type="hidden" name="form-name" value="contact" />
               <div>
