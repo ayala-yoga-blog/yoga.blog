@@ -54,9 +54,17 @@ export default ({ data, location }) => {
                 <div className="checkbox-bk">
                   {schedule_list.reverse().map((d, idx) => {
                     return (
-                      <div className="mt-2 mb-2">
-                        <input type="checkbox" id={d} name={d} value={d} />
-                        <label htmlFor={d}>{d}</label>
+                      <div className="mt-2 mb-2" key={idx}>
+                        <label htmlFor={d} key={idx}>
+                          <input
+                            type="checkbox"
+                            id={idx}
+                            name={d}
+                            value={d}
+                            key={idx}
+                          />
+                          {d}
+                        </label>
                       </div>
                     )
                   })}
