@@ -60,7 +60,8 @@ export default ({ data, location }) => {
                             type="checkbox"
                             id={idx}
                             name="interest"
-                            value={idx}
+                            value={d}
+                            required
                           />
                           {d}
                         </label>
