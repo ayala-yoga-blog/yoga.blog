@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import { useForm } from "react-hook-form"
+import axios from 'axios'
 
 import Layout from "../components/layout"
 
@@ -9,21 +10,20 @@ import SEO from "../components/seo"
 export default ({ data, location }) => {
 
   const { register, handleSubmit, errors } = useForm()
-  // const onSubmit = data => {
-  //   try {
-  //     fetch('/', {
-  //       method: 'POST',
-  //       mode: 'cors',
-  //       cache: 'no-cache',
-  //       body: JSON.stringify(data),
-  //       headers: {
-  //         'Content-type': 'application/json; charset=UTF-8',
-  //       },
-  //     });
-  //   } catch (error) {
-  //     // handle server errors
-  //   }
-  // };
+const submit = (values) => {
+  // CORS対策は必須
+  const CORS_PROXY = 'https://cors-anywhere.herokuapp.com/'
+
+  // 実行
+  axios
+    .post(CORS_PROXY + '/')
+    .then(() => {
+      window.location.href = '/thanks' // 成功時
+    })
+    .catch((error) => {
+      console.log(error) // 失敗時
+    })
+}
 
   let schedule_list = []
 
@@ -67,7 +67,7 @@ export default ({ data, location }) => {
               data-netlify="true"
               data-netlify-honeypot="bot-field"
               action="/thankyou"
-              // onSubmit={handleSubmit(onSubmit)}
+              onSubmit={handleSubmit(submit)}
             >
               <input type="hidden" name="form-name" value="test2" />
               <div>
