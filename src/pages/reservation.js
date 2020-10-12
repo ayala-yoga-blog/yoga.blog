@@ -52,7 +52,6 @@ export default ({ data, location }) => {
               data-netlify="true"
               data-netlify-honeypot="bot-field"
               action="/thankyou"
-              onSubmit={handleSubmit(onSubmit)}
             >
               <input type="hidden" name="form-name" value="test2" />
               <div>
