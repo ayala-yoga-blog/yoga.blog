@@ -7,11 +7,13 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 export default ({ data, location }) => {
+
   const { register, handleSubmit, errors } = useForm()
   const onSubmit = data => console.log(data)
   console.log(errors)
 
   let schedule_list = []
+
   const list_item = data.contentfulBlogPost.content.json.content.filter(
     item => item.nodeType === "unordered-list"
   )
@@ -61,79 +63,79 @@ export default ({ data, location }) => {
                   {schedule_list.reverse().map((d, idx) => {
                     return (
                       <div className="mt-2 mb-2" key={idx}>
-                        <input type="checkbox" id={idx} name={idx} value={d} />
+                        <input type="checkbox" id={idx} name={idx} value={d}/>
                         <label htmlFor={idx}>{d}</label>
                       </div>
                     )
                   })}
                 </div>
               </div>
-              <label htmlFor="name">
+              <label htmlFor="name" className={`${errors.name && 'error-font'}`}>
                 お名前
                 <input
                   type="text"
                   name="name"
                   id="name"
-                  className="text-form mt-3"
-                  ref={register({ required: true, maxLength: 20 })}
+                  className={`text-form mt-3 ${errors.name && 'error-input'}`}
+                  ref={register({ required: '必ず入力してください', maxLength:{value:20,message:'20文字以内で入力してください'} })}
                 />
               </label>
-              <div>{errors.name && errors.name.message}</div>
+              {errors.name && <div className='error-font error-size'>※{errors.name.message}</div>}
               <div className="mb-7"></div>
-              <label htmlFor="furigana mb-7">
+              <label htmlFor="furigana" className={`${errors.furigana && 'error-font'}`}>
                 フリガナ
                 <input
                   type="text"
                   name="furigana"
                   id="furigana"
-                  className="text-form mt-3"
+                  className={`text-form mt-3 ${errors.furigana && 'error-input'}`}
                   ref={register({
-                    required: "必ずご入力してください",
+                    required: "必ず入力してください",
                     pattern: {
                       value: /^[ァ-ンヴー]*$/,
-                      message: "カタカナでご入力してください",
+                      message: "カタカナで入力してください",
                     },
                   })}
                 />
               </label>
-              <div>{errors.furigana && errors.furigana.message}</div>
+              {errors.furigana && <div className='error-font error-size'>※{errors.furigana.message}</div>}
               <div className="mb-7"></div>
-              <label htmlFor="tel">
+              <label htmlFor="tel" className={`${errors.tel && 'error-font'}`}>
                 電話番号
                 <input
                   type="tel"
                   name="tel"
                   id="tel"
-                  className="text-form mt-3"
+                  className={`text-form mt-3 ${errors.tel && 'error-input'}`}
                   ref={register({
-                    required: "必ずご入力してください",
+                    required: "必ず入力してください",
                     pattern: {
                       value: /^[0-9]+$/g,
-                      message: "カタカナでご入力してください",
+                      message: "半角数字で入力してください",
                     },
                   })}
                 />
               </label>
-              <div>{errors.tel && errors.tel.message}</div>
+              {errors.tel && <div className='error-font error-size'>※{errors.tel.message}</div>}
               <div className="mb-7"></div>
 
-              <label htmlFor="mail">
+              <label htmlFor="mail" className={`${errors.email && 'error-font'}`}>
                 メールアドレス
                 <input
                   type="email"
                   name="email"
                   id="mail"
-                  className="text-form mt-3"
+                  className={`text-form mt-3 ${errors.email && 'error-input'}`}
                   ref={register({
-                    required: "必ずご入力してください",
+                    required: "必ず入力してください",
                     pattern: {
                       value: /^[A-Za-z0-9]{1}[A-Za-z0-9_.-]*@{1}[A-Za-z0-9_.-]{1,}\.[A-Za-z0-9]{1,}$/,
-                      message: "カタカナでご入力してください",
+                      message: "正しいメールアドレスを入力してください",
                     },
                   })}
                 />
               </label>
-              <div>{errors.email && errors.email.message}</div>
+              {errors.email && <div className='error-font error-size'>※{errors.email.message}</div>}
               <div className="mb-7"></div>
               <label htmlFor="text">
                 メッセージ

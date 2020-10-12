@@ -919,3 +919,20 @@ nav
   font-weight: bold;
   margin-bottom: 12px;
 }
+
+/*============
+#text-color
+=============*/
+
+.error-font {
+  color: red;
+}
+
+.error-input {
+  border: 1px solid red;
+}
+
+.error-size {
+  font-size: 14px;
+  letter-spacing: 0.6px;
+}
