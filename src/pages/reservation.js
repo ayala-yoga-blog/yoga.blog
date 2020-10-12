@@ -10,12 +10,13 @@ import SEO from "../components/seo"
 export default ({ data, location }) => {
 
   const { register, handleSubmit, errors } = useForm()
-  const submit = (values) => {
-    // CORS対策は必須
+const submit = (values) => {
+  // CORS対策は必須
+  const CORS_PROXY = 'https://cors-anywhere.herokuapp.com/'
 
-    // 実行
+  // 実行
     axios
-      .post('/')
+      .post(CORS_PROXY + '/')
       .then(() => {
         window.location.href = '/thankyou' // 成功時
       })
