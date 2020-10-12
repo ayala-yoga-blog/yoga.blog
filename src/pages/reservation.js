@@ -9,21 +9,21 @@ import SEO from "../components/seo"
 export default ({ data, location }) => {
 
   const { register, handleSubmit, errors } = useForm()
-  const onSubmit = data => {
-    try {
-      fetch('/', {
-        method: 'POST',
-        mode: 'cors',
-        cache: 'no-cache',
-        body: JSON.stringify(data),
-        headers: {
-          'Content-type': 'application/json; charset=UTF-8',
-        },
-      });
-    } catch (error) {
-      // handle server errors
-    }
-  };
+  // const onSubmit = data => {
+  //   try {
+  //     fetch('/', {
+  //       method: 'POST',
+  //       mode: 'cors',
+  //       cache: 'no-cache',
+  //       body: JSON.stringify(data),
+  //       headers: {
+  //         'Content-type': 'application/json; charset=UTF-8',
+  //       },
+  //     });
+  //   } catch (error) {
+  //     // handle server errors
+  //   }
+  // };
 
   let schedule_list = []
 
@@ -67,7 +67,7 @@ export default ({ data, location }) => {
               data-netlify="true"
               data-netlify-honeypot="bot-field"
               action="/thankyou"
-              onSubmit={handleSubmit(onSubmit)}
+              // onSubmit={handleSubmit(onSubmit)}
             >
               <input type="hidden" name="form-name" value="test2" />
               <div>
