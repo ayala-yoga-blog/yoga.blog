@@ -10,20 +10,19 @@ import SEO from "../components/seo"
 export default ({ data, location }) => {
 
   const { register, handleSubmit, errors } = useForm()
-const submit = (values) => {
-  // CORS対策は必須
-  const CORS_PROXY = 'https://cors-anywhere.herokuapp.com/'
+  const submit = (values) => {
+    // CORS対策は必須
 
-  // 実行
-  axios
-    .post(CORS_PROXY + '/')
-    .then(() => {
-      window.location.href = '/thanks' // 成功時
-    })
-    .catch((error) => {
-      console.log(error) // 失敗時
-    })
-}
+    // 実行
+    axios
+      .post('/')
+      .then(() => {
+        window.location.href = '/thankyou' // 成功時
+      })
+      .catch((error) => {
+        console.log(error) // 失敗時
+      })
+  }
 
   let schedule_list = []
 
