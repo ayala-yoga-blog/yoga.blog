@@ -9,8 +9,6 @@ import SEO from "../components/seo"
 export default ({ data, location }) => {
 
   const { register, handleSubmit, errors } = useForm()
-  const onSubmit = data => console.log(data)
-  console.log(errors)
 
   let schedule_list = []
 
