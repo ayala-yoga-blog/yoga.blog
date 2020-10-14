@@ -414,7 +414,11 @@ svg {
 }
 
 .content .container {
-  max-width: 785px;
+  width: 785px;
+}
+
+.content .container-blogpost {
+  width: 100%;
 }
 
 .content h1 {

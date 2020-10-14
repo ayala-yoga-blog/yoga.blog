@@ -70,7 +70,7 @@ export default ({ data, pageContext, location }) => {
           </figure>
         </div>
         <article className="content">
-          <div className="container">
+          <div className="container-blogpost">
             <h1 className="bar">{data.contentfulBlogPost.title}</h1>
             <aside className="info">
               <time dateTime={data.contentfulBlogPost.publishData}>

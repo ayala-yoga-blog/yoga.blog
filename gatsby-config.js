@@ -40,8 +40,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `AYALA YOGA`,
-        short_name: `AYALA`,
+        name: `Aya's YOGA`,
+        short_name: `Aya's`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#477294`,
