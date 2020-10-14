@@ -1,29 +1,11 @@
 import React from "react"
 import { graphql } from "gatsby"
-import { useForm } from "react-hook-form"
-import axios from 'axios'
 
 import Layout from "../components/layout"
 
 import SEO from "../components/seo"
 
 export default ({ data, location }) => {
-
-const { register, handleSubmit, errors } = useForm()
-const submit = (values) => {
-  // CORS対策は必須
-  const CORS_PROXY = 'https://cors-anywhere.herokuapp.com/'
-
-  // 実行
-    axios
-      .post(CORS_PROXY + '/')
-      .then(() => {
-        window.location.href = '/thankyou' // 成功時
-      })
-      .catch((error) => {
-        console.log(error) // 失敗時
-      })
-  }
 
   let schedule_list = []
 
@@ -67,7 +49,6 @@ const submit = (values) => {
               data-netlify="true"
               data-netlify-honeypot="bot-field"
               action="/thankyou"
-              onSubmit={handleSubmit(submit)}
             >
               <input type="hidden" name="form-name" value="test2" />
               <div>
@@ -83,72 +64,49 @@ const submit = (values) => {
                   })}
                 </div>
               </div>
-              <label htmlFor="name" className={`${errors.name && 'error-font'}`}>
+              <label htmlFor="name">
                 お名前
                 <input
                   type="text"
                   name="name"
                   id="name"
-                  className={`text-form mt-3 ${errors.name && 'error-input'}`}
-                  ref={register({ required: '必ず入力してください', maxLength:{value:20,message:'20文字以内で入力してください'} })}
+                  className="text-form mt-3"
+                  required
                 />
               </label>
-              {errors.name && <div className='error-font error-size'>※{errors.name.message}</div>}
               <div className="mb-7"></div>
-              <label htmlFor="furigana" className={`${errors.furigana && 'error-font'}`}>
+              <label htmlFor="furigana">
                 フリガナ
                 <input
                   type="text"
                   name="furigana"
                   id="furigana"
-                  className={`text-form mt-3 ${errors.furigana && 'error-input'}`}
-                  ref={register({
-                    required: "必ず入力してください",
-                    pattern: {
-                      value: /^[ァ-ンヴー]*$/,
-                      message: "カタカナで入力してください",
-                    },
-                  })}
+                  className="text-form mt-3"
+                  required
                 />
               </label>
-              {errors.furigana && <div className='error-font error-size'>※{errors.furigana.message}</div>}
               <div className="mb-7"></div>
-              <label htmlFor="tel" className={`${errors.tel && 'error-font'}`}>
+              <label htmlFor="tel">
                 電話番号
                 <input
                   type="tel"
                   name="tel"
                   id="tel"
-                  className={`text-form mt-3 ${errors.tel && 'error-input'}`}
-                  ref={register({
-                    required: "必ず入力してください",
-                    pattern: {
-                      value: /^[0-9]+$/g,
-                      message: "半角数字で入力してください",
-                    },
-                  })}
+                  className="text-form mt-3"
+                  required
                 />
               </label>
-              {errors.tel && <div className='error-font error-size'>※{errors.tel.message}</div>}
               <div className="mb-7"></div>
-
-              <label htmlFor="mail" className={`${errors.email && 'error-font'}`}>
+              <label htmlFor="mail">
                 メールアドレス
                 <input
                   type="email"
                   name="email"
                   id="mail"
-                  className={`text-form mt-3 ${errors.email && 'error-input'}`}
-                  ref={register({
-                    required: "必ず入力してください",
-                    pattern: {
-                      value: /^[A-Za-z0-9]{1}[A-Za-z0-9_.-]*@{1}[A-Za-z0-9_.-]{1,}\.[A-Za-z0-9]{1,}$/,
-                      message: "正しいメールアドレスを入力してください",
-                    },
-                  })}
+                  className="text-form mt-3"
+                  required
                 />
               </label>
-              {errors.email && <div className='error-font error-size'>※{errors.email.message}</div>}
               <div className="mb-7"></div>
               <label htmlFor="text">
                 メッセージ
