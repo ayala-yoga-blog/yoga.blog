@@ -7,10 +7,10 @@
 module.exports = {
   /* Your site config here */
   siteMetadata: {
-    title: `AYALA`,
-    description: `AYALAのYOGA情報発信&レッスン予約サイト`,
+    title: `Aya's`,
+    description: `Aya's vinyasa yoga / yin yogaのレッスン予約`,
     lang: "ja",
-    siteUrl: `https://keen-newton-816efa.netlify.app`,
+    siteUrl: `https://ayasvinyasa.com`,
     locale: `ja_JP`,
     fbappid: `XXXXXXXXXXXXXXXXXXXXX`,
     home: `Home`,

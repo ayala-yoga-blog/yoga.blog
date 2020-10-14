@@ -26,8 +26,8 @@ export default ({ data, location }) => {
   return (
     <Layout>
       <SEO
-        pagetitle="AYALAについて"
-        pagedesc="YOGAについての情報を発信しているサイトです。"
+        pagetitle="vinyasa yoga / yin yogaのレッスン予約"
+        pagedesc="vinyasa yoga / yin yogaのレッスン予約"
         pagepath={location.pathname}
       />
       <div>
