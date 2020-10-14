@@ -44,13 +44,13 @@ export default ({ data, location }) => {
             </div>
 
             <form
-              name="test2"
+              name="reservation"
               method="post"
               data-netlify="true"
               data-netlify-honeypot="bot-field"
               action="/thankyou"
             >
-              <input type="hidden" name="form-name" value="test2" />
+              <input type="hidden" name="form-name" value="reservation" />
               <div>
                 <p className="mb-3">開催日程</p>
                 <div className="checkbox-bk mb-7">
