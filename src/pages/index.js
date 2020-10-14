@@ -26,7 +26,7 @@ export default ({ data }) => (
           心のそこから、今が一番幸せであると常に思える様、生活幸福度の向上を目的とします。
         </p>
         <div className="button">
-          <Link to={`/blog/`}>
+          <Link to={`/reservation/`}>
             <div className="button-ac">レッスンのご予約はこちら</div>
           </Link>
         </div>

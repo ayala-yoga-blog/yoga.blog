@@ -23,7 +23,7 @@ module.exports = {
     aboutUrl: `/about`,
     blogUrl: `/blog`,
     scheduleUrl: `/schedule`,
-    instagramUrl: `/Instagram`,
+    instagramUrl: `https://www.instagram.com/ayazonyoga`,
     lessonUrl: `/reservation`,
   },
   plugins: [

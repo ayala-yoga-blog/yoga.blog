@@ -45,8 +45,8 @@ export default ({ data, location }) => {
   return (
     <Layout>
       <SEO
-        pagetitle="AYALAについて"
-        pagedesc="YOGAについての情報を発信しているサイトです。"
+        pagetitle="vinyasa yoga / yin yogaのレッスンスケジュール"
+        pagedesc="vinyasa yoga / yin yogaのレッスンスケジュール"
         pagepath={location.pathname}
       />
       <div>
@@ -70,7 +70,7 @@ export default ({ data, location }) => {
               </div>
             </MediaQuery>
             <div className="button button_sc">
-              <Link to={`/blog/`}>
+              <Link to={`/reservation/`}>
                 <div className="button-ac">レッスンのご予約はこちら</div>
               </Link>
             </div>

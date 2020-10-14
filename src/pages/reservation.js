@@ -9,7 +9,7 @@ import SEO from "../components/seo"
 
 export default ({ data, location }) => {
 
-  const { register, handleSubmit, errors } = useForm()
+const { register, handleSubmit, errors } = useForm()
 const submit = (values) => {
   // CORS対策は必須
   const CORS_PROXY = 'https://cors-anywhere.herokuapp.com/'
