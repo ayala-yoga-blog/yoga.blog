@@ -68,6 +68,11 @@ svg {
   width: 1px;
 }
 
+.eyecatch {
+  max-height: 34vw;
+  overflow: hidden;
+}
+
 /* ヘッダー */
 .header .container {
   display: flex;
