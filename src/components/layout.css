@@ -414,7 +414,7 @@ svg {
 }
 
 .content .container {
-  width: 785px;
+  width: 100%;
 }
 
 .content .container-blogpost {
