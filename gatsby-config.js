@@ -66,7 +66,12 @@ module.exports = {
             family: "Noto Sans JP",
             variable: true,
             weights: [100, 300, 400, 500, 700, 900],
-          }
+          },
+          {
+            family: "Allura",
+            variable: true,
+            weights: "400",
+          },
         ],
       },
     },
@@ -78,6 +83,10 @@ module.exports = {
             family: `Noto Sans JP`,
             subsets: [`japanese`],
             variants: [`100`, `300`, `400`, `500`, `700`, `900`],
+          },
+          {
+            family: `Allura`,
+            weights: `400`,
           }
         ],
       },
