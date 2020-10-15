@@ -1,6 +1,5 @@
 import React, { useState } from "react"
 
-// import Header from "../components/header"
 import Logo_header from "../components/logo-header"
 import Footer from "../components/footer"
 import Meny from "../components/meny"
