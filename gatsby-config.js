@@ -7,8 +7,8 @@
 module.exports = {
   /* Your site config here */
   siteMetadata: {
-    title: `Aya's`,
-    description: `Aya's vinyasa yoga / yin yogaのレッスン予約`,
+    title: `ayala`,
+    description: `ayala vinyasa yoga / yin yogaのレッスン予約`,
     lang: "ja",
     siteUrl: `https://ayasvinyasa.com`,
     locale: `ja_JP`,
@@ -40,8 +40,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Aya's YOGA`,
-        short_name: `Aya's`,
+        name: `ayala YOGA`,
+        short_name: `ayala`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#477294`,

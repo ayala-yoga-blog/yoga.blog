@@ -28,7 +28,7 @@ export default ({ open, setOpen, home }) => {
     <div className="top">
       <div className="color-bar top"></div>
       <div>
-        <div className="company-logo">Aya's</div>
+        <div className="company-logo">ayala</div>
         <div className="company-logo_subtitle">vinyasa yoga / yin yoga</div>
         <MediaQuery query="(max-width: 1024px)">
           <div id="nav-area">

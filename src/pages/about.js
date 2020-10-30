@@ -10,7 +10,7 @@ export default ({ data, location }) => {
   return (
     <Layout>
       <SEO
-        pagetitle="Aya'sについて"
+        pagetitle="ayalaについて"
         pagedesc="vinyasa yoga / yin yogaのレッスンサイトになります。"
         pagepath={location.pathname}
       />

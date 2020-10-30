@@ -15,7 +15,7 @@ export default ({ data, pageContext, location }) => {
   return (
     <Layout>
       <SEO
-        pagetitle="Aya's_BLOG"
+        pagetitle="ayala_BLOG"
         pagedesc="vinyasa yoga / yin yogaについての情報を発信しているブログです。"
         pagepath={location.pathname}
       />
