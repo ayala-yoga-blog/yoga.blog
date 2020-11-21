@@ -74,22 +74,6 @@ module.exports = {
           },
         ],
       },
-    },
-    {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
-      options: {
-        fonts: [
-          {
-            family: `Noto Sans JP`,
-            subsets: [`japanese`],
-            variants: [`100`, `300`, `400`, `500`, `700`, `900`],
-          },
-          {
-            family: `Allura`,
-            weights: `400`,
-          }
-        ],
-      },
-    },
+    }
   ],
 }
