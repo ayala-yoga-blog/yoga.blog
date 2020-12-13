@@ -10,7 +10,7 @@ module.exports = {
     title: `ayala`,
     description: `ayala vinyasa yoga / yin yogaのレッスン予約`,
     lang: "ja",
-    siteUrl: `https://ayasvinyasa.com`,
+    siteUrl: `https://ayalavinyasa.com/`,
     locale: `ja_JP`,
     fbappid: `XXXXXXXXXXXXXXXXXXXXX`,
     home: `Home`,
